@@ -57,15 +57,15 @@ _data.add(newVal);
   // uses a binary search to find appropriate index
   public void addBinary(Integer newVal)
   {
-int lst = _data.size;
+int lst = _data.size();
 int fst = _data.get(1);
 int mdl = (fst + lst)/2;
 int i = 0;
-   while(i <= _data.size){
-	if( _data[mdl] < newVal){
+   while(i <= _data.size()){
+	if( _data.get(mdl) < newVal){
 	fst = mdl +1;
 	}
-	else if(_data[mdl] == newVal){
+	else if(_data.get(mdl) == newVal){
 	_data.add(mdl , newVal);
 	} else { 
 	lst = mdl -1;
