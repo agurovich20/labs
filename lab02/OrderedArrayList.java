@@ -24,12 +24,6 @@ return _data.toString();
 
   public boolean remove( int i )
   {
-    for(int x = 0; x < size(); x++){
-	if(_data.get(x) > i){
-	_data.remove(x , i);
-	return true;
-	}
-    }
     _data.remove(i);
    return true;
 
@@ -42,7 +36,7 @@ return _data.size();
 
   public Integer get( int i )
   {
-return _data.get(index);
+return _data.get(i);
   }
 
   // inserts newVal at the appropriate index
