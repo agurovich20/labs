@@ -47,6 +47,7 @@ return _data.get(i);
 for(int i = 0; i < size(); i++){
     if(_data.get(i) > newVal){
     _data.add(i, newVal);
+    break;
   }
 }
 _data.add(newVal);
@@ -67,6 +68,7 @@ int i = 0;
 	}
 	else if(_data.get(mdl) == newVal){
 	_data.add(mdl , newVal);
+	break;
 	} else { 
 	lst = mdl -1;
 	}
