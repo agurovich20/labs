@@ -1,30 +1,27 @@
-//Header in OrderedArrayList
-public class ALTester
-{
-int[] _data =  new int [23];
-private int _size;
+import java.util.*;
 
-public ALTester()
-{
-System.out.print("{ ");
-   for(int i=0; i< 23; i++){
-    _data[i]  = (int)(Math.random() * 10);
-    _size += 1;
-    System.out.print(_data[i]+" ");
-  }
-System.out.println(" }");
-}
-public boolean check(){
-   for(int i=0;  i+2 < _size; i++){
-	if(_data[i] < _data[i+1]){
-	return false;
+public class ALTester {
+
+	public static ArrayList _data = new ArrayList();
+
+	public static void main(String[] args) {
+		for (int i = 0; i < 23; i++)
+			// adds numbers in descending order, but it should still be added in the correct place
+			OrderedArrayList.add(_data, 23 - i);
+
+		// should be sorted #'s 1-23
+		printArrayList(_data);
+
+		// should be true
+		System.out.println(isSorted(_data));
+		_data.add(50);
 	}
-  }
- return true;
-}
 
-public static void main(String [] args){
-ALTester test = new ALTester();
-System.out.println(test.check());
-}
+	public static boolean isSorted(ArrayList<Integer> a) {
+		for (int i = 0; i < a.size() - 1; i++) {
+			if (a.get(i) > a.get(i + 1))
+				return false;
+		}
+		return true;
+	}
 }
