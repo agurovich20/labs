@@ -1,2 +1,7 @@
-Consonants
+Consonants - Ari Gurovich, Oscar Breen
+
+12/11/21
+
+DISCO - How and when to use break; 
+QCC - What is an out of memory error?
 
